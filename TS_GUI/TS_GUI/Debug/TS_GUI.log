@@ -1,6 +1,4 @@
-﻿  TS_GUIDlg.cpp
-e:\facultate\ac\image processing\gui\ts_gui\ts_gui\ts_guidlg.cpp(114): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-e:\facultate\ac\image processing\gui\ts_gui\ts_gui\ts_guidlg.cpp(119): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-e:\facultate\ac\image processing\gui\ts_gui\ts_gui\ts_guidlg.cpp(125): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-e:\facultate\ac\image processing\gui\ts_gui\ts_gui\ts_guidlg.cpp(131): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+﻿  Skipping... (no relevant changes detected)
+  TS_GUIDlg.cpp
+  TS_GUI.cpp
   TS_GUI.vcxproj -> E:\Facultate\AC\Image Processing\GUI\TS_GUI\Debug\TS_GUI.exe

@@ -130,6 +130,18 @@ BOOL CTS_GUIDlg::OnInitDialog()
 	dim_y = r.bottom - r.top;
 	elem->MoveWindow(aux_x + 0.01*screen_x_size, screen_y_size - (dim_y + 0.07*screen_y_size + 2 * aux_y), screen_x_size - (aux_x + 0.01*screen_x_size + screen_x_size*0.02), dim_y);
 
+	elem = GetDlgItem(IDC_CONFIG_PAN);
+	elem->GetWindowRect(&r);
+	elem->MoveWindow(0.01*screen_x_size, 0.02*screen_y_size, 0.24*screen_x_size, 0.4*screen_y_size);
+
+	elem = GetDlgItem(IDC_STAT_PAN);
+	elem->GetWindowRect(&r);
+	elem->MoveWindow(0.01*screen_x_size, 0.44*screen_y_size, 0.24*screen_x_size, 0.4*screen_y_size);
+
+	elem = GetDlgItem(IDC_IMG_DISP);
+	elem->GetWindowRect(&r);
+	elem->MoveWindow(0.26*screen_x_size, 0.02*screen_y_size, 0.72*screen_x_size, 0.82*screen_y_size);
+
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
