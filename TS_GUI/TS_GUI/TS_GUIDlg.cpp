@@ -142,6 +142,12 @@ BOOL CTS_GUIDlg::OnInitDialog()
 	elem->GetWindowRect(&r);
 	elem->MoveWindow(0.26*screen_x_size, 0.02*screen_y_size, 0.72*screen_x_size, 0.82*screen_y_size);
 
+	elem = GetDlgItem(IDC_IMG_CAM1);
+	elem->MoveWindow(0.47*screen_x_size, 0.06*screen_y_size, 0.3*screen_x_size, 0.36*screen_y_size);
+
+	elem = GetDlgItem(IDC_IMG_CAM2);
+	elem->MoveWindow(0.47*screen_x_size, 0.45*screen_y_size, 0.3*screen_x_size, 0.36*screen_y_size);
+
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
