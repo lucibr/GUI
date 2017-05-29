@@ -107,17 +107,21 @@ BOOL CTS_GUIDlg::OnInitDialog()
 
 	// TODO: Add extra initialization here
 	CWnd *elem;
+
+	//Pozitionare buton inchidere
 	elem = GetDlgItem(IDCLOSE);
 	elem->GetWindowRect(&r);
 	dim_y = r.bottom - r.top;
 	dim_x = r.right - r.left;
 	elem->MoveWindow(screen_x_size-(dim_x+0.02*screen_x_size), screen_y_size-(dim_y + 0.07*screen_y_size), dim_x, dim_y);
 
+	//Pozitionare buton restart
 	elem = GetDlgItem(IDREFRESH);
 	elem->GetWindowRect(&r);
 	dim_x = r.right - r.left;
 	elem->MoveWindow(0.01*screen_x_size, screen_y_size - (dim_y + 0.07*screen_y_size), dim_x, dim_y);
 	
+	//Pozitionare text cale folder
 	elem = GetDlgItem(IDC_STATIC_TEXTCALE);
 	elem->GetWindowRect(&r);
 	aux_y = r.bottom - r.top;
@@ -125,28 +129,58 @@ BOOL CTS_GUIDlg::OnInitDialog()
 	elem->MoveWindow(0.01*screen_x_size, screen_y_size - (dim_y + 0.07*screen_y_size + 2*aux_y), aux_x, dim_y);
 	aux_x = r.right;
 
+	//Pozitionare control alegere folder
 	elem = GetDlgItem(IDC_CALE_IMG);
 	elem->GetWindowRect(&r);
 	dim_y = r.bottom - r.top;
 	elem->MoveWindow(aux_x + 0.01*screen_x_size, screen_y_size - (dim_y + 0.07*screen_y_size + 2 * aux_y), screen_x_size - (aux_x + 0.01*screen_x_size + screen_x_size*0.02), dim_y);
 
+	//Pozitionare chenar configurari procesare
 	elem = GetDlgItem(IDC_CONFIG_PAN);
 	elem->GetWindowRect(&r);
 	elem->MoveWindow(0.01*screen_x_size, 0.02*screen_y_size, 0.24*screen_x_size, 0.4*screen_y_size);
 
+	//Pozitionare chenar statistici
 	elem = GetDlgItem(IDC_STAT_PAN);
 	elem->GetWindowRect(&r);
 	elem->MoveWindow(0.01*screen_x_size, 0.44*screen_y_size, 0.24*screen_x_size, 0.4*screen_y_size);
 
+	//Pozitionare chenar diplay imagini
 	elem = GetDlgItem(IDC_IMG_DISP);
 	elem->GetWindowRect(&r);
 	elem->MoveWindow(0.26*screen_x_size, 0.02*screen_y_size, 0.72*screen_x_size, 0.82*screen_y_size);
 
+	//Pozitionare zona imagine marita camera 1
 	elem = GetDlgItem(IDC_IMG_CAM1);
-	elem->MoveWindow(0.47*screen_x_size, 0.06*screen_y_size, 0.3*screen_x_size, 0.36*screen_y_size);
+	elem->MoveWindow(0.47*screen_x_size, 0.10*screen_y_size, 0.3*screen_x_size, 0.36*screen_y_size);
 
+	//Pozitionare zona imagine camera 1 - previuos
+	elem = GetDlgItem(IDC_IMG_CAM1_PREV);
+	elem->MoveWindow(0.28*screen_x_size, 0.19*screen_y_size, 0.15*screen_x_size, 0.18*screen_y_size);
+
+	//Pozitionare zona imagine camera 1 - next
+	elem = GetDlgItem(IDC_IMG_CAM1_NEXT);
+	elem->MoveWindow(0.81*screen_x_size, 0.19*screen_y_size, 0.15*screen_x_size, 0.18*screen_y_size);
+
+	//Pozitionare zona imagine marita camera 2
 	elem = GetDlgItem(IDC_IMG_CAM2);
-	elem->MoveWindow(0.47*screen_x_size, 0.45*screen_y_size, 0.3*screen_x_size, 0.36*screen_y_size);
+	elem->MoveWindow(0.47*screen_x_size, 0.46*screen_y_size, 0.3*screen_x_size, 0.36*screen_y_size);
+
+	//Pozitionare zona imagine camera 2 - previuos
+	elem = GetDlgItem(IDC_IMG_CAM2_PREV);
+	elem->MoveWindow(0.28*screen_x_size, 0.55*screen_y_size, 0.15*screen_x_size, 0.18*screen_y_size);
+
+	//Pozitionare zona imagine camera 2 - next
+	elem = GetDlgItem(IDC_IMG_CAM2_NEXT);
+	elem->MoveWindow(0.81*screen_x_size, 0.55*screen_y_size, 0.15*screen_x_size, 0.18*screen_y_size);
+
+	//Pozitionare slider imagini
+	elem = GetDlgItem(IDC_IMG_SLIDER);
+	elem->MoveWindow(0.27*screen_x_size, 0.055*screen_y_size, 0.70*screen_x_size, 0.03*screen_y_size);
+
+	//Pozitionare spin imagini
+	elem = GetDlgItem(IDC_SPIN_IMG);
+	elem->MoveWindow(0.58*screen_x_size, 0.035*screen_y_size, 0.04*screen_x_size, 0.025*screen_y_size);
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }

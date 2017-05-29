@@ -1,29 +1,30 @@
 #include "stdafx.h"
-#include "ImgRepository.h"
-#include <list>
 #include <string>
+#include <vector>
 #include <Windows.h>
+
+#include "ImgRepository.h"
 
 using namespace std;
 ImgRepository::ImgRepository(string path)
 {
-	pathToImg = path;
-	WIN32_FIND_DATA fd;
-	HANDLE hFind = ::FindFirstFile(wstring(pathToImg.begin(), pathToImg.end()).c_str(), &fd);
-	if (hFind != INVALID_HANDLE_VALUE)
+	/*pathtoimg = path;
+	win32_find_data fd;
+	handle hfind = ::findfirstfile(wstring(pathtoimg.begin(), pathtoimg.end()).c_str(), &fd);
+	if (hfind != invalid_handle_value)
 	{
 		do
 		{
-			if (!(fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) 
+			if (!(fd.dwfileattributes & file_attribute_directory)) 
 			{
-				wstring ws(fd.cFileName);
+				wstring ws(fd.cfilename);
 				string str(ws.begin(), ws.end());
-				imgList.push_back(str);
+				imglist.push_back(str);
 			}
 		}
-		while (::FindNextFile(hFind, &fd));
-		FindClose(hFind);
-	}
+		while (::findnextfile(hfind, &fd));
+		findclose(hfind);
+	}*/
 }
 
 

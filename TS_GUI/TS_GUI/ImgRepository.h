@@ -2,10 +2,11 @@
 class ImgRepository
 {
 private:
-	list<string> imgList;
-	string pathToImg;
+	std::vector<std::string> imgList;
+	std::string pathToImg;
 public:
-	ImgRepository(string path);
+	ImgRepository();
+	ImgRepository(std::string);
 	~ImgRepository();
 };
 
